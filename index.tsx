@@ -233,22 +233,13 @@ const Hero: React.FC = () => {
                   
                 </div>
 <div className="p-6 overflow-x-auto text-left">
-  <pre className="font-mono text-sm leading-relaxed">
-    <code className="text-slate-300">
-      <span className="text-purple-400">private</span>{" "}
-      <span className="text-purple-400">static</span>{" "}
-      <span className="text-blue-400">void</span>{" "}
-      <span className="text-yellow-300">Main</span>
-      {"("}<span className="text-slate-300">string[] args</span>{")"}
-      {"\n"}
-      {"{"}
-      {"\n    "}
-      Program.
-      {"<"}csiai$){")"}cy{"&"}og{"&"}{"(">"}(args);
-      {"\n"}
-      {"}"}
-    </code>
-  </pre>
+ <pre className="font-mono text-sm leading-relaxed text-slate-300">
+{`private static void Main(string[] args)
+{
+    Program.<csiai$)cy&og&>(args);
+}`}
+</pre>
+
 </div>
 
             </div>
