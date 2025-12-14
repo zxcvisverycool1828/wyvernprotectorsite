@@ -68,26 +68,18 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/5' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-         <div className="flex items-center gap-2">
-  <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-transparent">
-    <img
-      src="https://protector.wyvern.sh/icon_white@3x.png"
-      alt="Logo"
-      className="w-full h-full object-contain"
-    />
-  </div>
-  <span className="font-bold text-xl tracking-tight text-white">
-    Wyvern<span className="text-blue-500">Protector</span>
-  </span>
-</div>
+return (
+  <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/5' : 'bg-transparent'}`}>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-between h-20">
+        <div className="flex items-center gap-2">
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-transparent">
+            <img src="..." alt="Logo" className="w-full h-full object-contain" />
+          </div>
+          <span className="font-bold text-xl tracking-tight text-white">
+            Wyvern<span className="text-blue-500">Protector</span>
+          </span>
+        </div>
 
             </div>
             <span className="font-bold text-xl tracking-tight text-white">
