@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Code, Zap, Lock, EyeOff, Shuffle, Server, CheckCircle2, Download, Menu, X, Github, Twitter, Disc } from 'lucide-react';
 
-// --- Constants ---
-
 const NAV_LINKS = [
   { name: 'Features', href: '#features' },
   { name: 'Pricing', href: '#pricing' },
@@ -13,33 +11,33 @@ const NAV_LINKS = [
 const FEATURES = [
   {
     icon: Shuffle,
-    title: 'Control Flow Flattening',
-    description: 'Transforms your code logic into a spaghetti-like structure, making manual analysis nearly impossible.'
+    title: 'Control Flow',
+    description: 'Transforms your code into a unreadable mess for protection.'
   },
   {
     icon: EyeOff,
     title: 'String Encryption',
-    description: 'Advanced AES-256 encryption for all string literals, hidden behind dynamic decryption routines.'
+    description: 'Advanced string encryption for your application..'
   },
   {
     icon: Code,
-    title: 'Symbol Renaming',
-    description: 'Renames classes, methods, and fields to unreadable characters or overloading patterns.'
+    title: 'Calli',
+    description: 'Makes method calls harder to reverse.'
   },
   {
     icon: Lock,
     title: 'Anti-Tamper',
-    description: 'Detects if your assembly has been modified at runtime and shuts down the application instantly.'
+    description: 'Prevents people form modifying your assembly.'
   },
   {
     icon: Server,
-    title: 'Resource Encryption',
-    description: 'Protects embedded resources and assets from being easily extracted by decompilers.'
+    title: 'Method Hiding',
+    description: 'Makes it harder for people to see the source of a method.'
   },
   {
     icon: Zap,
-    title: 'JIT Optimization',
-    description: 'Ensures that obfuscation layers do not significantly impact the runtime performance of your app.'
+    title: 'Optimization',
+    description: 'Removes redundant code.'
   }
 ];
 
@@ -48,21 +46,19 @@ const PRICING_PLANS = [
     name: 'Professional',
     price: '$15',
     period: '/month',
-    description: 'Advanced security for commercial software.',
+    description: 'Advanced security for applications.',
     features: [
-      'Advanced Renaming (Overloading)',
-      'String Encryption (AES-256)',
-      'Control Flow Flattening (Level 3)',
-      'Anti-Tamper & Anti-Debug',
+      'Calli)',
+      'String Encryption)',
+      'Control Flow Flattening',
+      'Anti-Tamper',
       'Priority Support',
-      'Resource Encryption'
+      'Optimization'
     ],
     cta: 'Purchase License',
     popular: true,
   }
 ];
-
-// --- Components ---
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -163,7 +159,7 @@ const Hero: React.FC = () => {
           className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 mb-8"
         >
           <span className="flex h-2 w-2 rounded-full bg-blue-500"></span>
-          <span className="text-sm text-slate-300 font-medium">v2.4.0 Stable Release Available</span>
+          <span className="text-sm text-slate-300 font-medium">Newly Available</span>
         </motion.div>
 
         <motion.h1
@@ -172,7 +168,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6"
         >
-          Ironclad Security for <br className="hidden sm:block" />
+          Unmatched Security for <br className="hidden sm:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
             .NET Applications
           </span>
@@ -184,7 +180,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-2xl text-lg sm:text-xl text-slate-400 mb-10"
         >
-          Protect your intellectual property with industry-leading obfuscation techniques. 
+          Protect your applications with unmatched obfuscation. 
           Prevent decompilation, tampering, and reverse engineering with Wyvern Protector.
         </motion.p>
 
@@ -222,18 +218,6 @@ const Hero: React.FC = () => {
                 <div className="p-6 overflow-x-auto text-left">
                     <pre className="font-mono text-sm leading-relaxed">
                         <code className="text-slate-300">
-                            <span className="text-purple-400">public</span> <span className="text-purple-400">static</span> <span className="text-blue-400">void</span> <span className="text-yellow-300">Main</span>() {"{"}
-                            <br />
-                            {"  "}<span className="text-purple-400">var</span> <span className="text-blue-300">_0x4f1a</span> = <span className="text-green-400">"\u0057\u0079\u0076\u0065\u0072\u006E"</span>;
-                            <br />
-                            {"  "}<span className="text-purple-400">switch</span> (<span className="text-blue-300">_0x9b2</span> % 4) {"{"}
-                            <br />
-                            {"    "}<span className="text-purple-400">case</span> 0: <span className="text-blue-300">_0x2c1</span>.<span className="text-yellow-300">Invoke</span>(); <span className="text-purple-400">break</span>;
-                            <br />
-                            {"    "}<span className="text-purple-400">case</span> 1: <span className="text-purple-400">return</span>;
-                            <br />
-                            {"  "}{"}"}
-                            <br />
                             {"}"}
                         </code>
                     </pre>
@@ -276,7 +260,7 @@ const Features: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
-            Military-Grade Protection
+            The Best Protection
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -285,7 +269,7 @@ const Features: React.FC = () => {
             transition={{ delay: 0.1, duration: 0.5 }}
             className="text-lg text-slate-400"
           >
-            Our engine employs state-of-the-art algorithms to secure your .NET assemblies against reverse engineering and tampering attempts.
+            Our obfuscator has advanced techniques to ensure your application is fully secured.
           </motion.p>
         </div>
 
@@ -443,8 +427,6 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-// --- App Root ---
 
 function App() {
   return (
