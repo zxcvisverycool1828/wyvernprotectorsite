@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Babel for in-browser JSX/TSX transformation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script>
@@ -39,10 +38,10 @@
     </script>
     <style>
       body {
-        background-color: #020617; /* Slate 950 */
+        background-color: #020617;
         color: #f8fafc;
       }
-      /* Custom Scrollbar */
+
       ::-webkit-scrollbar {
         width: 10px;
       }
@@ -74,7 +73,7 @@
 </head>
   <body>
     <div id="root"></div>
-    <!-- Load the main entry file with Babel for compilation -->
+
     <script type="text/babel" data-type="module" data-presets="typescript,react" src="./index.tsx"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
