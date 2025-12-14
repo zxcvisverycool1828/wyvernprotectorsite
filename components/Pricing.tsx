@@ -14,8 +14,7 @@ const Pricing: React.FC = () => {
           <p className="text-lg text-slate-400">Choose the level of protection that fits your needs.</p>
         </div>
 
-        {/* Changed grid to flex justify-center to center the single item */}
-        <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-8">
           {PRICING_PLANS.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -23,7 +22,7 @@ const Pricing: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="w-full max-w-md" // Added width constraints for flex item
+              className="w-full max-w-md"
             >
               <div className={`relative flex flex-col p-8 rounded-2xl border h-full transition-colors duration-300 ${
                 plan.popular 

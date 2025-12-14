@@ -49,11 +49,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center"
         >
-          {/* Removed CSS transition/transform classes from this button to prevent conflict with parent motion.div if any, 
-              but since this is a static button inside a motion div, it is fine. 
-              However, the motion.div above handles the entrance. 
-              The button hover effect uses transition-all which is safe here as it is a child of the motion.div, not the motion element itself. */}
-          <button className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all duration-200 shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] hover:-translate-y-1">
+          <button className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-transform duration-200 hover:-translate-y-1 shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)]">
             <Download className="mr-2" size={20} />
             Get Started
           </button>
