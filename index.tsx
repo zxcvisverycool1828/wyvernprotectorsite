@@ -393,7 +393,7 @@ const Footer: React.FC = () => {
               <span className="font-bold text-xl text-white">Wyvern</span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed">
-              Advanced .NET obfuscation technology designed to protect your intellectual property from reverse engineering and tampering.
+              Advanced .NET obfuscation technology to protect your applications from reverse engineering and tampering.
             </p>
           </div>
           
@@ -409,11 +409,6 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="font-semibold text-white mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">EULA</a></li>
-            </ul>
           </div>
         </div>
 
@@ -421,11 +416,6 @@ const Footer: React.FC = () => {
           <p className="text-slate-600 text-sm">
             © {new Date().getFullYear()} Wyvern Protector. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <a href="#" className="text-slate-500 hover:text-white transition-colors"><Github size={20} /></a>
-            <a href="#" className="text-slate-500 hover:text-white transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="text-slate-500 hover:text-white transition-colors"><Disc size={20} /></a>
-          </div>
         </div>
       </div>
     </footer>
