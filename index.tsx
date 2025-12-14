@@ -214,10 +214,14 @@ const Hero: React.FC = () => {
                         <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
                     </div>
                     <span className="ml-2 text-xs text-slate-500 font-mono">ObfuscatedOutput.cs</span>
+                  
                 </div>
                 <div className="p-6 overflow-x-auto text-left">
                     <pre className="font-mono text-sm leading-relaxed">
                         <code className="text-slate-300">
+                                                     <span className="text-purple-400">public</span> <span className="text-purple-400">static</span> <span className="text-blue-400">void</span> <span className="text-yellow-300">Main</span>() {"{"}
+
+
                             {"}"}
                         </code>
                     </pre>
