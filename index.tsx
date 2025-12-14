@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Code, Zap, Lock, EyeOff, Shuffle, Server, CheckCircle2, Download, Menu, X, Github, Twitter, Disc } from 'lucide-react';
-import logo from './icon_white@3x.png'; // adjust path as needed
 
 const NAV_LINKS = [
   { name: 'Features', href: '#features' },
@@ -80,7 +79,12 @@ const Navbar: React.FC = () => {
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white">
          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white">
-  <img src={logo} alt="Logo" className="w-5 h-5" />
+<img
+  src="https://protector.wyvern.sh/icon_white@3x.png"
+  alt="Logo"
+  className="w-5 h-5 object-contain"
+/>
+
 </div>
             </div>
             <span className="font-bold text-xl tracking-tight text-white">
