@@ -17,7 +17,7 @@ const FEATURES = [
   {
     icon: EyeOff,
     title: 'String Encryption',
-    description: 'Advanced string encryption for your application..'
+    description: 'Advanced string encryption for your application.'
   },
   {
     icon: Code,
@@ -48,8 +48,8 @@ const PRICING_PLANS = [
     period: '/month',
     description: 'Advanced security for applications.',
     features: [
-      'Calli)',
-      'String Encryption)',
+      'Calli',
+      'String Encryption',
       'Control Flow Flattening',
       'Anti-Tamper',
       'Priority Support',
