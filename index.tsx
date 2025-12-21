@@ -176,7 +176,6 @@ const Hero: React.FC = () => {
           className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 mb-8"
         >
           <span className="flex h-2 w-2 rounded-full bg-wyvern-500"></span>
-          <span className="text-sm text-neutral-300 font-medium">Newly Available</span>
         </motion.div>
 
         <motion.h1
