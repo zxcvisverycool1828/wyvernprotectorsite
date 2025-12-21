@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/5' : 'bg-transparent'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-neutral-950/80 backdrop-blur-md border-b border-white/5' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
 
@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
                   <a
                     key={link.name}
                     href={link.href}
-                    className="text-slate-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="text-neutral-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     {link.name}
                   </a>
@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none"
+                className="inline-flex items-center justify-center p-2 rounded-md text-neutral-400 hover:text-white hover:bg-neutral-800 focus:outline-none"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -134,14 +134,14 @@ const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-950 border-b border-white/5 overflow-hidden"
+            className="md:hidden bg-neutral-950 border-b border-white/5 overflow-hidden"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-neutral-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -176,7 +176,7 @@ const Hero: React.FC = () => {
           className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 mb-8"
         >
           <span className="flex h-2 w-2 rounded-full bg-wyvern-500"></span>
-          <span className="text-sm text-slate-300 font-medium">Newly Available</span>
+          <span className="text-sm text-neutral-300 font-medium">Newly Available</span>
         </motion.div>
 
         <motion.h1
@@ -195,7 +195,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-2xl text-lg sm:text-xl text-slate-400 mb-10"
+          className="max-w-2xl text-lg sm:text-xl text-neutral-400 mb-10"
         >
           Protect your applications with unmatched obfuscation. 
           Prevent decompilation, tampering, and reverse engineering with Wyvern Protector.
@@ -223,18 +223,19 @@ const Hero: React.FC = () => {
           className="mt-20 w-full max-w-4xl relative"
         >
             <div className="absolute -inset-1 bg-gradient-to-r from-wyvern-600 to-wyvern-800 rounded-2xl blur opacity-20"></div>
-            <div className="relative bg-slate-900 border border-white/10 rounded-xl overflow-hidden shadow-2xl">
-                <div className="flex items-center gap-2 px-4 py-3 bg-slate-950/50 border-b border-white/5">
+            {/* Replaced bg-slate-900 with bg-neutral-900 */}
+            <div className="relative bg-neutral-900 border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+                <div className="flex items-center gap-2 px-4 py-3 bg-neutral-950/50 border-b border-white/5">
                     <div className="flex gap-1.5">
                         <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
                         <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
                         <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
                     </div>
-                    <span className="ml-2 text-xs text-slate-500 font-mono">ObfuscatedOutput.cs</span>
+                    <span className="ml-2 text-xs text-neutral-500 font-mono">ObfuscatedOutput.cs</span>
                   
                 </div>
 <div className="p-6 overflow-x-auto text-left">
- <pre className="font-mono text-sm leading-relaxed text-slate-300">
+ <pre className="font-mono text-sm leading-relaxed text-neutral-300">
 {`private static void Main(string[] args)
 {
     Program.<csiai$)cy&og&>(args);
@@ -271,7 +272,7 @@ const itemVariants = {
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="py-24 bg-slate-950 relative">
+    <section id="features" className="py-24 bg-neutral-950 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
@@ -288,7 +289,7 @@ const Features: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="text-lg text-slate-400"
+            className="text-lg text-neutral-400"
           >
             Our obfuscator has advanced techniques to ensure your application is fully secured.
           </motion.p>
@@ -309,14 +310,14 @@ const Features: React.FC = () => {
                 variants={itemVariants}
                 className="h-full"
               >
-                <div className="group p-8 rounded-2xl bg-slate-900 border border-white/5 hover:border-wyvern-500/30 transition-colors duration-300 hover:bg-slate-800/50 h-full">
+                <div className="group p-8 rounded-2xl bg-neutral-900 border border-white/5 hover:border-wyvern-500/30 transition-colors duration-300 hover:bg-neutral-800/50 h-full">
                   <div className="w-12 h-12 rounded-lg bg-wyvern-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="text-wyvern-500" size={24} />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="text-neutral-400 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -332,12 +333,13 @@ const Features: React.FC = () => {
 const Pricing: React.FC = () => {
   return (
     <section id="pricing" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-slate-900/50 -skew-y-3 transform origin-top-left scale-110" />
+      {/* Replaced bg-slate-900 with bg-neutral-900 */}
+      <div className="absolute inset-0 bg-neutral-900/50 -skew-y-3 transform origin-top-left scale-110" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
-          <p className="text-lg text-slate-400">Choose the level of protection that fits your needs.</p>
+          <p className="text-lg text-neutral-400">Choose the level of protection that fits your needs.</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">
@@ -352,8 +354,8 @@ const Pricing: React.FC = () => {
             >
               <div className={`relative flex flex-col p-8 rounded-2xl border h-full transition-colors duration-300 ${
                 plan.popular 
-                  ? 'bg-slate-900 border-wyvern-500 shadow-[0_0_30px_rgba(220,38,38,0.15)]' 
-                  : 'bg-slate-950 border-white/10'
+                  ? 'bg-neutral-900 border-wyvern-500 shadow-[0_0_30px_rgba(220,38,38,0.15)]' 
+                  : 'bg-neutral-950 border-white/10'
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-wyvern-500 to-wyvern-700 rounded-full text-xs font-bold text-white uppercase tracking-wider">
@@ -362,19 +364,19 @@ const Pricing: React.FC = () => {
                 )}
 
                 <div className="mb-8">
-                  <h3 className="text-lg font-medium text-slate-300 mb-2">{plan.name}</h3>
+                  <h3 className="text-lg font-medium text-neutral-300 mb-2">{plan.name}</h3>
                   <div className="flex items-baseline mb-4">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    {plan.period && <span className="text-slate-500 ml-2">{plan.period}</span>}
+                    {plan.period && <span className="text-neutral-500 ml-2">{plan.period}</span>}
                   </div>
-                  <p className="text-sm text-slate-400">{plan.description}</p>
+                  <p className="text-sm text-neutral-400">{plan.description}</p>
                 </div>
 
                 <ul className="flex-1 space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start">
                       <CheckCircle2 className="flex-shrink-0 text-wyvern-500 mr-3" size={18} />
-                      <span className="text-sm text-slate-300">{feature}</span>
+                      <span className="text-sm text-neutral-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -399,7 +401,7 @@ const Pricing: React.FC = () => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-950 border-t border-white/5 pt-16 pb-8">
+    <footer className="bg-neutral-950 border-t border-white/5 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
@@ -413,14 +415,14 @@ const Footer: React.FC = () => {
               </div>
               <span className="font-bold text-xl text-white">Wyvern</span>
             </div>
-            <p className="text-slate-500 text-sm leading-relaxed">
+            <p className="text-neutral-500 text-sm leading-relaxed">
               Advanced .NET obfuscation technology to protect your applications from reverse engineering and tampering.
             </p>
           </div>
           
           <div>
             <h4 className="font-semibold text-white mb-4">Product</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
+            <ul className="space-y-2 text-sm text-neutral-400">
               <li><a href="#features" className="hover:text-wyvern-400 transition-colors">Features</a></li>
               <li><a href="#pricing" className="hover:text-wyvern-400 transition-colors">Pricing</a></li>
               <li><a href="#" className="hover:text-wyvern-400 transition-colors">Changelog</a></li>
@@ -434,7 +436,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-600 text-sm">
+          <p className="text-neutral-600 text-sm">
             © {new Date().getFullYear()} Wyvern Protector. All rights reserved.
           </p>
         </div>
@@ -445,7 +447,7 @@ const Footer: React.FC = () => {
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 selection:bg-wyvern-500/30">
+    <div className="min-h-screen bg-neutral-950 text-neutral-50 selection:bg-wyvern-500/30">
       <Navbar />
       <main>
         <Hero />
