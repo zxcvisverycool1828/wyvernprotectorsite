@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []); // <-- empty deps, runs once
+  }, []); 
 
   return (
     <>
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
                 />
               </div>
               <span className="font-bold text-xl tracking-tight text-white">
-                Wyvern<span className="text-blue-500">Protector</span>
+                Wyvern<span className="text-wyvern-500">Protector</span>
               </span>
             </div>
 
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
                 ))}
                 <a
                   href="#"
-                  className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-[0_0_15px_rgba(37,99,235,0.3)]"
+                  className="bg-wyvern-600 hover:bg-wyvern-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-[0_0_15px_rgba(220,38,38,0.3)]"
                 >
                   Get Started
                 </a>
@@ -147,7 +147,7 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
-              <a href="#" className="w-full text-center block mt-4 bg-blue-600 text-white px-3 py-3 rounded-lg font-medium">
+              <a href="#" className="w-full text-center block mt-4 bg-wyvern-600 text-white px-3 py-3 rounded-lg font-medium">
                 Get Started
               </a>
             </div>
@@ -163,8 +163,9 @@ const Hero: React.FC = () => {
   return (
     <div className="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]" />
-         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px]" />
+         {/* Changed blobs to wyvern colors */}
+         <div className="absolute top-0 left-1/4 w-96 h-96 bg-wyvern-600/20 rounded-full blur-[100px]" />
+         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-wyvern-800/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
@@ -174,7 +175,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 mb-8"
         >
-          <span className="flex h-2 w-2 rounded-full bg-blue-500"></span>
+          <span className="flex h-2 w-2 rounded-full bg-wyvern-500"></span>
           <span className="text-sm text-slate-300 font-medium">Newly Available</span>
         </motion.div>
 
@@ -185,7 +186,7 @@ const Hero: React.FC = () => {
           className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6"
         >
           Unmatched Security for <br className="hidden sm:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-wyvern-400 to-wyvern-600">
             .NET Applications
           </span>
         </motion.h1>
@@ -206,7 +207,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center"
         >
-          <button className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-transform duration-200 hover:-translate-y-1 shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)]">
+          <button className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-wyvern-600 hover:bg-wyvern-500 text-white font-semibold transition-transform duration-200 hover:-translate-y-1 shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]">
             <Download className="mr-2" size={20} />
             Get Started
           </button>
@@ -221,7 +222,7 @@ const Hero: React.FC = () => {
           }}
           className="mt-20 w-full max-w-4xl relative"
         >
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-20"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-wyvern-600 to-wyvern-800 rounded-2xl blur opacity-20"></div>
             <div className="relative bg-slate-900 border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                 <div className="flex items-center gap-2 px-4 py-3 bg-slate-950/50 border-b border-white/5">
                     <div className="flex gap-1.5">
@@ -308,9 +309,9 @@ const Features: React.FC = () => {
                 variants={itemVariants}
                 className="h-full"
               >
-                <div className="group p-8 rounded-2xl bg-slate-900 border border-white/5 hover:border-blue-500/30 transition-colors duration-300 hover:bg-slate-800/50 h-full">
-                  <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="text-blue-500" size={24} />
+                <div className="group p-8 rounded-2xl bg-slate-900 border border-white/5 hover:border-wyvern-500/30 transition-colors duration-300 hover:bg-slate-800/50 h-full">
+                  <div className="w-12 h-12 rounded-lg bg-wyvern-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="text-wyvern-500" size={24} />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
@@ -351,11 +352,11 @@ const Pricing: React.FC = () => {
             >
               <div className={`relative flex flex-col p-8 rounded-2xl border h-full transition-colors duration-300 ${
                 plan.popular 
-                  ? 'bg-slate-900 border-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.15)]' 
+                  ? 'bg-slate-900 border-wyvern-500 shadow-[0_0_30px_rgba(220,38,38,0.15)]' 
                   : 'bg-slate-950 border-white/10'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full text-xs font-bold text-white uppercase tracking-wider">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-wyvern-500 to-wyvern-700 rounded-full text-xs font-bold text-white uppercase tracking-wider">
                     Most Popular
                   </div>
                 )}
@@ -372,7 +373,7 @@ const Pricing: React.FC = () => {
                 <ul className="flex-1 space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start">
-                      <CheckCircle2 className="flex-shrink-0 text-blue-500 mr-3" size={18} />
+                      <CheckCircle2 className="flex-shrink-0 text-wyvern-500 mr-3" size={18} />
                       <span className="text-sm text-slate-300">{feature}</span>
                     </li>
                   ))}
@@ -381,7 +382,7 @@ const Pricing: React.FC = () => {
                 <button
                   className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${
                     plan.popular
-                      ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-900/20'
+                      ? 'bg-wyvern-600 hover:bg-wyvern-500 text-white shadow-lg shadow-wyvern-900/20'
                       : 'bg-white/10 hover:bg-white/15 text-white'
                   }`}
                 >
@@ -403,7 +404,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-wyvern-600 flex items-center justify-center">
                 <img
                   src="https://protector.wyvern.sh/icon_white@3x.png"
                   alt="Wyvern Logo"
@@ -420,10 +421,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#features" className="hover:text-blue-400 transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-blue-400 transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Changelog</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Download</a></li>
+              <li><a href="#features" className="hover:text-wyvern-400 transition-colors">Features</a></li>
+              <li><a href="#pricing" className="hover:text-wyvern-400 transition-colors">Pricing</a></li>
+              <li><a href="#" className="hover:text-wyvern-400 transition-colors">Changelog</a></li>
+              <li><a href="#" className="hover:text-wyvern-400 transition-colors">Download</a></li>
             </ul>
           </div>
 
@@ -444,7 +445,7 @@ const Footer: React.FC = () => {
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 selection:bg-blue-500/30">
+    <div className="min-h-screen bg-slate-950 text-slate-50 selection:bg-wyvern-500/30">
       <Navbar />
       <main>
         <Hero />
