@@ -105,8 +105,9 @@ const Navbar: React.FC = () => {
                     {link.name}
                   </a>
                 ))}
+                {/* Updated Get Started Link */}
                 <a
-                  href="#"
+                  href="#pricing"
                   className="bg-wyvern-600 hover:bg-wyvern-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-[0_0_15px_rgba(220,38,38,0.3)]"
                 >
                   Get Started
@@ -147,7 +148,12 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
-              <a href="#" className="w-full text-center block mt-4 bg-wyvern-600 text-white px-3 py-3 rounded-lg font-medium">
+              {/* Updated Mobile Get Started Link */}
+              <a 
+                href="#pricing" 
+                className="w-full text-center block mt-4 bg-wyvern-600 text-white px-3 py-3 rounded-lg font-medium"
+                onClick={() => setIsOpen(false)}
+              >
                 Get Started
               </a>
             </div>
@@ -163,7 +169,6 @@ const Hero: React.FC = () => {
   return (
     <div className="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-         {/* Red background blobs */}
          <div className="absolute top-0 left-1/4 w-96 h-96 bg-wyvern-600/20 rounded-full blur-[100px]" />
          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-wyvern-900/20 rounded-full blur-[100px]" />
       </div>
@@ -176,6 +181,7 @@ const Hero: React.FC = () => {
           className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 mb-8"
         >
           <span className="flex h-2 w-2 rounded-full bg-wyvern-500"></span>
+          <span className="text-sm text-neutral-300 font-medium">Newly Available</span>
         </motion.div>
 
         <motion.h1
@@ -206,10 +212,14 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center"
         >
-          <button className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-wyvern-600 hover:bg-wyvern-500 text-white font-semibold transition-transform duration-200 hover:-translate-y-1 shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]">
+          {/* Updated Hero Button to Anchor Link */}
+          <a 
+            href="#pricing"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-wyvern-600 hover:bg-wyvern-500 text-white font-semibold transition-transform duration-200 hover:-translate-y-1 shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]"
+          >
             <Download className="mr-2" size={20} />
             Get Started
-          </button>
+          </a>
         </motion.div>
 
         <motion.div
@@ -222,7 +232,6 @@ const Hero: React.FC = () => {
           className="mt-20 w-full max-w-4xl relative"
         >
             <div className="absolute -inset-1 bg-gradient-to-r from-wyvern-600 to-wyvern-800 rounded-2xl blur opacity-20"></div>
-            {/* Replaced bg-slate-900 with bg-neutral-900 */}
             <div className="relative bg-neutral-900 border border-white/10 rounded-xl overflow-hidden shadow-2xl">
                 <div className="flex items-center gap-2 px-4 py-3 bg-neutral-950/50 border-b border-white/5">
                     <div className="flex gap-1.5">
@@ -332,7 +341,6 @@ const Features: React.FC = () => {
 const Pricing: React.FC = () => {
   return (
     <section id="pricing" className="py-24 relative overflow-hidden">
-      {/* Replaced bg-slate-900 with bg-neutral-900 */}
       <div className="absolute inset-0 bg-neutral-900/50 -skew-y-3 transform origin-top-left scale-110" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -380,15 +388,19 @@ const Pricing: React.FC = () => {
                   ))}
                 </ul>
 
-                <button
-                  className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${
+                {/* Updated Button to Link to Discord */}
+                <a
+                  href="https://discord.gg/wyvern"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${
                     plan.popular
                       ? 'bg-wyvern-600 hover:bg-wyvern-500 text-white shadow-lg shadow-wyvern-900/20'
                       : 'bg-white/10 hover:bg-white/15 text-white'
                   }`}
                 >
                   {plan.cta}
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
