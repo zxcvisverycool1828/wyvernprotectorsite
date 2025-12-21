@@ -163,9 +163,9 @@ const Hero: React.FC = () => {
   return (
     <div className="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-         {/* Changed blobs to wyvern colors */}
+         {/* Red background blobs */}
          <div className="absolute top-0 left-1/4 w-96 h-96 bg-wyvern-600/20 rounded-full blur-[100px]" />
-         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-wyvern-800/10 rounded-full blur-[100px]" />
+         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-wyvern-900/20 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
