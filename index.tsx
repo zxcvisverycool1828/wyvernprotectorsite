@@ -388,9 +388,9 @@ const Pricing: React.FC = () => {
                   ))}
                 </ul>
 
-                {/* Updated Button to Link to Discord */}
+
                 <a
-                  href="https://discord.gg/wyvern"
+                  href="https://reseller.best/product/wyvern-protector-1-month/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${
